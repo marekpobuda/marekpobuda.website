@@ -1,0 +1,18 @@
+baseurl = "http://www.marekpobuda.com/"
+canonifyurls = false
+languageCode = "en-us"
+title = "Marek Pobuda"
+
+[params]
+  voice_type = "Baritone"
+  username_facebook = "pobuda.marek"
+  username_twitter = "PobudaMarek"
+  username_instagram = "pobudamarek"
+  channel_youtube = "UCpvaHPX-vA-gZUe-00SALlQ"
+  email = "pobuda.marek@gmail.com"
+
+[[menu.main]]
+  name = "Home"
+  weight = -1 # Leftmost menu item
+  identifier = "home"
+  url = "/"

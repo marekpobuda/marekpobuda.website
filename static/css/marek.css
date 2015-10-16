@@ -1,0 +1,22 @@
+body {
+  padding-top: 70px;
+  background-color: rgb(255, 255, 255);
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media(max-width: 767px) {
+	.contact { font-size: 20px; }
+}
+@media(min-width: 768px) {
+	.contact { font-size: 26px; }
+}
+@media(min-width: 992px) {
+	.contact { font-size: 30px; }
+}
+@media(min-width: 1200px) {
+	.contact { font-size: 34px;	}
+}
