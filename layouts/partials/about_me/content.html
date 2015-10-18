@@ -1,0 +1,36 @@
+<!-- Main Content -->
+<div class="container text-center">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+      <h1>{{ .Title }}</h1>
+      <br>
+      <!-- Nav tabs -->
+      <!-- Style: Removes line from under tabs -->
+      <ul class="nav nav-tabs" role="tablist" style="border-bottom: 0px; margin-bottom: 5px;">
+        <li role="presentation" class="active"><a href="#english" aria-controls="english" role="tab" data-toggle="tab">English</a></li>
+        <li role="presentation"><a href="#deutsch" aria-controls="deutsch" role="tab" data-toggle="tab">Deutsch</a></li>
+        <li role="presentation"><a href="#slovensky" aria-controls="slovensky" role="tab" data-toggle="tab">Slovensky</a></li>
+      </ul>
+      <!-- Tab content -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="english">
+          {{ $filename_en := print .Params.directory "/subpages/english.html" }}
+          {{ partial $filename_en . }}
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="deutsch">
+          {{ $filename_de := print .Params.directory "/subpages/deutsch.html" }}
+          {{ partial $filename_de . }}
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="slovensky">
+          {{ $filename_sk := print .Params.directory "/subpages/slovensky.html" }}
+          {{ partial $filename_sk . }}
+        </div>
+      </div>
+      <br>
+
+      <div class="thumbnail">
+        <img class="img-responsive" src="/images/profile_foto_2015/DSC_4157cb.jpg" alt="Marek Pobuda" >
+      </div>
+    </div>
+  </div>
+</div>

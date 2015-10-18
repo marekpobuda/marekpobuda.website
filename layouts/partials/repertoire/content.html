@@ -4,7 +4,23 @@
     <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
       <h1>{{ .Title }}</h1>
       <br>
-      {{ partial "repertoire/table.html" . }}
+      <!-- Nav tabs -->
+      <!-- Style: Removes line from under tabs -->
+      <ul class="nav nav-tabs" role="tablist" style="border-bottom: 0px; margin-bottom: 5px;">
+        <li role="presentation" class="active"><a href="#theatre" aria-controls="theatre" role="tab" data-toggle="tab">Theatre</a></li>
+        <li role="presentation"><a href="#concerts" aria-controls="concerts" role="tab" data-toggle="tab">Concerts</a></li>
+      </ul>
+      <!-- Tab content -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="theatre">
+          {{ $filename := print .Params.directory "/table_theatre.html" }}
+          {{ partial $filename . }}
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="concerts">
+          {{ $filename := print .Params.directory "/table_concerts.html" }}
+          {{ partial $filename . }}
+        </div>
+      </div>
     </div>
   </div>
 </div>

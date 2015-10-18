@@ -1,0 +1,23 @@
+<div class="table-responsive">
+  <table class="table table-striped" style="text-align: left;">
+    <thead>
+      <tr>
+        {{ $url := "http://docs.google.com/feeds/download/spreadsheets/Export?key=11FBNb7pzJiMyYGwwctjCwbWsVEtu94dnDkg51qy7ex0&exportFormat=csv&gid=0" }}
+        {{ $separator := "," }}
+        {{ $csvfile := getCSV $separator $url }}
+        {{ $header := index $csvfile 0 }}
+        <th>{{ index $header 0 }}</th>
+        <th>{{ index $header 1 }}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{ range $i, $row := after 1 $csvfile }}
+        <tr>
+          <td>{{ index $row 0 }}</td>
+          <td>{{ index $row 1 }}</td>
+        </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
