@@ -8,6 +8,7 @@
       <ul class="nav nav-tabs" role="tablist" style="border-bottom: 0px; margin-bottom: 5px;">
         <li role="presentation" class="active"><a href="#concerts" aria-controls="concerts" role="tab" data-toggle="tab">Concerts</a></li>
         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li role="presentation"><a href="#advent" aria-controls="advent" role="tab" data-toggle="tab">Adventny Koncert</a></li>
         <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">Other</a></li>
       </ul>
       <!-- Tab content -->
@@ -17,6 +18,9 @@
         </div>
         <div role="tabpanel" class="tab-pane fade" id="profile">
           {{ partial "gallery/subpages/profile_imgs.html" . }}
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="advent">
+          {{ partial "gallery/subpages/advent_imgs.html" . }}
         </div>
         <div role="tabpanel" class="tab-pane fade" id="other">
           {{ partial "gallery/subpages/other_imgs.html" . }}
