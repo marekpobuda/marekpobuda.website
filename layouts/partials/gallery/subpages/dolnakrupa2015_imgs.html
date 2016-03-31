@@ -1,0 +1,16 @@
+{{ $dir := "/images/Koncert_Dolna_Krupa_20_12_2015/" }}
+{{ $fsdir := print "static/" $dir }}
+
+{{ $files := readDir $fsdir }}
+    {{ range $files }}
+        <div class="row">
+        	<div class="col-sm-12 col-md-12 col-lg-12">
+          	<div class="thumbnail">
+            	<img class="img-responsive" src="{{$dir}}{{.Name | urlize }}" alt="Marek Pobuda" >
+              <div class="caption">
+        				<b>Koncert Dolná Krupá</b> (20.12.2015)
+        			</div>
+          	</div>
+        	</div>
+        </div>
+     {{ end }}
