@@ -8,6 +8,22 @@ footer {
   padding-bottom: 50px;
 }
 
+.facebook-color {
+  color: #3b5998;
+}
+.twitter-color {
+  color: #55acee;
+}
+.instagram-color {
+  color: #3f729b;
+}
+.youtube-color {
+  color: #e52d27;
+}
+.email-color {
+  color: grey;
+}
+
 @media(max-width: 767px) {
 	.contact { font-size: 20px; }
 }

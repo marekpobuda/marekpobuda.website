@@ -7,7 +7,7 @@
           {{ if isset .Site.Params "username_facebook" }}
           <li>
             <a href="https://www.facebook.com/sharer/sharer.php?u=marekpobuda.com" target="_blank" title="Share on Facebook">
-              <span class="fa-stack fa-2x" style="color: #3b5998">
+              <span class="fa-stack fa-2x facebook-color">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
               </span>
@@ -17,7 +17,7 @@
           {{ if isset .Site.Params "username_twitter" }}
           <li>
             <a href="https://twitter.com/{{ .Site.Params.username_twitter }}" target="_blank" title="Twitter">
-              <span class="fa-stack fa-2x" style="color: #55acee">
+              <span class="fa-stack fa-2x twitter-color">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
               </span>
@@ -27,7 +27,7 @@
           {{ if isset .Site.Params "username_instagram" }}
           <li>
               <a href="https://instagram.com/{{ .Site.Params.username_instagram }}" target="_blank" title="Instagram">
-                  <span class="fa-stack fa-2x" style="color: #517fa4">
+                  <span class="fa-stack fa-2x instagram-color">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
                   </span>
@@ -37,7 +37,7 @@
           {{ if isset .Site.Params "channel_youtube" }}
           <li>
               <a href="https://youtube.com/channel/{{ .Site.Params.channel_youtube }}/videos" target="_blank" title="YouTube Channel">
-                  <span class="fa-stack fa-2x" style="color: #cd201f">
+                  <span class="fa-stack fa-2x youtube-color">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
                   </span>
@@ -47,7 +47,7 @@
           {{ if isset .Site.Params "email" }}
           <li>
               <a href="mailto:{{ .Site.Params.email }}" target="_blank" title="Email">
-                  <span class="fa-stack fa-2x" style="color: grey">
+                  <span class="fa-stack fa-2x email-color">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
                   </span>
@@ -55,7 +55,7 @@
           </li>
           {{ end }}
         </ul>
-        <p class="copyright text-muted">&copy;&nbsp;{{ .Site.Title }}&nbsp;2015</p>
+        <p class="copyright text-muted">&copy;&nbsp;{{ .Site.Title }}&nbsp;{{ .Now.Year }}</p>
       </div>
     </div>
   </div>

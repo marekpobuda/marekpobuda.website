@@ -10,9 +10,11 @@
         {{ $header := index $csvfile 0 }}
 
         {{ $date := index $header 0 }}
+        {{ $type := index $header 1 }}
         {{ $description := index $header 2 }}
         {{ $place := index $header 3 }}
         <th>{{ $date }}</th>
+        <th>{{ $type }}</th>
         <th>{{ $description }}</th>
         <th>{{ $place }}</th>
       </tr>
@@ -25,7 +27,8 @@
         <tr>
           <td  style="text-align: right;">{{ index $r 0 }}</td>
           {{ $type := index $r 1 }}
-          <td><span class="label {{ if eq (lower $type) "predstavenie" }}label-primary{{ else }}label-success{{ end }}">{{ index $r 1 }}</span> {{ index $r 2 }}</td>
+          <td><span class="label {{ if eq (lower $type) "predstavenie" }}label-primary{{ else }}label-success{{ end }}">{{ index $r 1 }}</span></td>          
+          <td>{{ index $r 2 }}</td>
           <td>{{ index $r 3 }}</td>
         </tr>
       {{ end }}
